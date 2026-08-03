@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>html,body{background:#1a1028;color:#f0eaf8;}</style>
+  <title>Education - Rishabh's Portfolio</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23c9b8f0'/><stop offset='100%25' stop-color='%23f4a7b9'/></linearGradient></defs><rect width='100' height='100' rx='32' fill='url(%23g)'/><text x='50' y='68' font-family='Cormorant Garamond, Georgia, serif' font-size='52' font-weight='700' font-style='italic' fill='%231a1028' text-anchor='middle'>RR</text></svg>">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <script>
+    if (sessionStorage.getItem('hasLoadedBefore')) {
+      document.documentElement.classList.add('skip-loader');
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="tailwind-config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <!-- Top Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="nav-logo-icon loading-logo">RR</div>
+  </div>
+
+  <div class="cursor" id="cursor">
+    <div class="cursor-r">R</div>
+  </div>
+  <div class="cursor-ring" id="cursorRing">
+    <div class="cursor-ring-inner"></div>
+  </div>
+
+  <!-- Background -->
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+  </div>
+  <canvas id="starCanvas"></canvas>
+
+  <!-- Nav -->
+  <nav class="education-mode">
+    <div class="nav-brand" onclick="window.location.href='index.html'; closeMobileNav();">
+      <div class="nav-logo-icon">RR</div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html" id="nav-home">Home</a></li>
+      <li><a href="about.html" id="nav-about">About</a></li>
+      <li><a href="projects.html" id="nav-projects">Projects</a></li>
+      <li><a href="skills.html" id="nav-skills">Skills</a></li>
+      <li><a href="contact.html" id="nav-contact">Contact</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMobileNav()">
+      <span></span><span></span><span></span>
+    </button>
+    <button class="nav-back-btn" id="backBtn" aria-label="Go back" onclick="window.location.href='about.html'; closeMobileNav();" style="display: inline-block !important;">
+      ← Back
+    </button>
+  </nav>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <a href="index.html" id="mnav-home">Home</a>
+    <a href="about.html" id="mnav-about">About</a>
+    <a href="projects.html" id="mnav-projects">Projects</a>
+    <a href="skills.html" id="mnav-skills">Skills</a>
+    <a href="contact.html" id="mnav-contact">Contact</a>
+  </div>
+
+  <!-- ===== EDUCATION ===== -->
+  <div class="section-page active" id="education">
+    <div class="section-header">
+      <p class="section-eyebrow">My Journey</p>
+      <h2 class="section-title"><em>Education & Experience</em></h2>
+    </div>
+    <div class="education-container max-w-3xl mx-auto">
+      <!-- B.Tech -->
+      <div class="education-card">
+        <div class="education-header">
+          <div>
+            <h3 class="text-2xl text-lavender font-semibold">B.Tech in Computer Science Engineering</h3>
+            <p class="text-muted text-sm mt-2">Specialisation: Software Engineering</p>
+          </div>
+          <span class="education-year">2025-2029</span>
+        </div>
+        <p class="text-textPrimary mb-3"><strong>SRMIST Kattankulathur, Chennai</strong></p>
+        <p class="text-muted leading-relaxed mb-6">Currently pursuing my degree with focus on software engineering
+          principles, web development, database management, and full-stack technologies. Actively involved in coding
+          competitions and technical projects.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-sky/10 border border-sky/20 rounded-lg text-[11px] text-sky">Programming for Problem
+            Solving</span>
+          <span class="px-3 py-1 bg-sky/10 border border-sky/20 rounded-lg text-[11px] text-sky">Web Development</span>
+          <span class="px-3 py-1 bg-sky/10 border border-sky/20 rounded-lg text-[11px] text-sky">Database
+            Management</span>
+          <span class="px-3 py-1 bg-sky/10 border border-sky/20 rounded-lg text-[11px] text-sky">Object-Oriented
+            Programming</span>
+        </div>
+      </div>
+
+      <!-- Technical Associate -->
+      <div class="education-card">
+        <div class="education-header">
+          <div>
+            <h3 class="text-2xl text-lavender font-semibold">Technical Associate (Web Dev)</h3>
+            <p class="text-muted text-sm mt-2">Coding Ninjas 10X SRM</p>
+            <p class="text-textPrimary mb-3"><strong>SRMIST Kattankulathur, Chennai</strong></p>
+          </div>
+          <span class="education-year">2026-Still Going On</span>
+        </div>
+        <p class="text-muted leading-relaxed mb-6">Mentoring students in web development fundamentals, conducting
+          problem-solving sessions, and guiding through real-world projects. Helping students understand core concepts
+          and best practices in modern web technologies.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Mentoring</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Guiding</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Leading</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Learning</span>
+        </div>
+      </div>
+
+      <!-- Class 12 -->
+      <div class="education-card">
+        <div class="education-header">
+          <div>
+            <h3 class="text-2xl text-lavender font-semibold">Class 12(PCM+IP)</h3>
+            <p class="text-muted text-sm mt-2">CBSE</p>
+            <p class="text-textPrimary mb-3"><strong>Army Public School Golconda</strong></p>
+            <p><strong>Hyderabad, Telangana</strong></p>
+          </div>
+          <span class="education-year">2023-2024</span>
+        </div>
+        <p class="text-muted leading-relaxed mb-6">Completed senior secondary education with Physics, Chemistry,
+          Mathematics, and Information Practices. This foundational period solidified my understanding of core
+          scientific principles and introduced me to programming fundamentals. Actively participated in science
+          exhibitions and coding contests, gaining hands-on experience with real-world problem-solving.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Physics</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Chemistry</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Mathematics</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Information
+            Practices</span>
+        </div>
+      </div>
+
+      <!-- Class 10 -->
+      <div class="education-card">
+        <div class="education-header">
+          <div>
+            <h3 class="text-2xl text-lavender font-semibold">Class 10</h3>
+            <p class="text-muted text-sm mt-2">CBSE</p>
+            <p class="text-textPrimary mb-3"><strong>Army Public School Khasa Cantt</strong></p>
+            <p><strong>Amritsar, Punjab</strong></p>
+          </div>
+          <span class="education-year">2021-2022</span>
+        </div>
+        <p class="text-muted leading-relaxed mb-6">Completed secondary education with a strong foundation in science and
+          mathematics. This phase ignited my curiosity about technology and problem-solving. Participated in various
+          competitions and developed strong analytical and logical thinking skills that would later shape my journey
+          into computer science.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Science &
+            Math</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">English</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Social
+            Studies</span>
+          <span class="px-3 py-1 bg-mint/10 border border-mint/20 rounded-lg text-[11px] text-mint">Foundation
+            Building</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-line">✦ &nbsp; Always learning & growing &nbsp; ✦</div>
+    <div class="copyright">&copy; 2026 Rishabh Raj.<br>All rights reserved.</div>
+  </div>
+
+  <!-- ===== RBOT Chatbot Widget ===== -->
+  <div class="rbot-widget-container" id="rbotWidgetContainer">
+    <div class="rbot-window hidden" id="rbotWindow">
+      <div class="rbot-header">
+        <div class="rbot-header-info">
+          <div class="rbot-avatar">R</div>
+          <div>
+            <h3 class="rbot-title">RBOT</h3>
+            <span class="rbot-status">Online</span>
+          </div>
+        </div>
+        <div class="rbot-header-actions">
+          <button class="rbot-clear" id="rbotClearChat" title="Clear Chat" aria-label="Clear Chat" style="display: flex; align-items: center; gap: 4px; font-size: 11px; font-family: 'DM Sans', sans-serif;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            Clear
+          </button>
+          <button class="rbot-close" id="rbotClose" aria-label="Close Chat">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+      <div class="rbot-messages" id="rbotMessages">
+        <div class="rbot-message bot">
+          <div class="rbot-bubble">Hi! I'm RBOT, Rishabh's AI assistant. Ask me anything about his skills, projects, or background!</div>
+        </div>
+      </div>
+      <div class="rbot-input-area">
+        <textarea id="rbotInput" placeholder="Ask me anything..." rows="1"></textarea>
+        <button id="rbotSend" aria-label="Send Message">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        </button>
+      </div>
+    </div>
+                <button class="rbot-fab" id="rbotFab" aria-label="Toggle Chat">
+      <svg class="rbot-icon-chat" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+      <svg class="rbot-icon-cross hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
