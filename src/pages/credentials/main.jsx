@@ -71,7 +71,7 @@ function CredentialsPage() {
             issuer="Amazon Web Services (AWS)"
             date="Jun 2026"
             credId="48da80ce905318472535"
-            tags={['Cloud FinOps','Cloud Cost Optimization']}
+            tags={['Cloud FinOps', 'Cloud Cost Optimization']}
             tagColor="sky"
             verifyUrl="https://certificate.eduskillsfoundation.org/verify/48da80ce905318472535/48da80ce905318472535"
           />
@@ -98,7 +98,7 @@ function CredentialsPage() {
             title="AWS Academy Graduate - Machine Learning for NLP"
             issuer="Amazon Web Services (AWS)"
             date="Mar 2026"
-            tags={['Natural Language Processing (NLP)','Machine Learning']}
+            tags={['Natural Language Processing (NLP)', 'Machine Learning']}
             tagColor="mint"
             verifyUrl="https://www.credly.com/badges/699335cf-31ed-4e88-b7e7-a01e345aa6aa/print"
           />
@@ -108,7 +108,7 @@ function CredentialsPage() {
             issuer="All India Council for Technical Education (AICTE)"
             date="Mar 2026"
             credId="426c98a4fc74e80b6a30"
-            tags={['Generative AI','Machine Learning']}
+            tags={['Generative AI', 'Machine Learning']}
             tagColor="sky"
             verifyUrl="https://certificate.eduskillsfoundation.org/verify/426c98a4fc74e80b6a30/426c98a4fc74e80b6a30"
           />
@@ -118,7 +118,7 @@ function CredentialsPage() {
             issuer="Microsoft"
             date="Dec 2025"
             credId="4b1904fe-75e6-4193-ad9f-7cafb9e8208a"
-            tags={['Generative AI','Microsoft Copilot Studio']}
+            tags={['Generative AI', 'Microsoft Copilot Studio']}
             tagColor="mint"
             verifyUrl="https://pwskills.com/learn/certificate/4b1904fe-75e6-4193-ad9f-7cafb9e8208a/"
           />
@@ -127,7 +127,7 @@ function CredentialsPage() {
             title="Google for Education Certifications"
             issuer="Google"
             date="Dec 2025"
-            tags={['Generative AI','Google Gemini']}
+            tags={['Generative AI', 'Google Gemini']}
             tagColor="sky"
             verifyUrl="https://edu.google.accredible.com/7dffb729-e1d2-4272-bf3b-af8c5da06dd5#acc.4rlf1SZ8"
           />
@@ -137,7 +137,7 @@ function CredentialsPage() {
             issuer="Udemy"
             date="Dec 2025"
             credId="UC-c3bc78ab-4daa-46e7-8ba3-6da81de3294b"
-            tags={['HTML5','CSS']}
+            tags={['HTML5', 'CSS']}
             tagColor="mint"
             verifyUrl="https://www.udemy.com/certificate/UC-c3bc78ab-4daa-46e7-8ba3-6da81de3294b/"
           />
@@ -157,7 +157,7 @@ function CredentialsPage() {
             issuer="Forage"
             date="Jun 2025"
             credId="fd9j9EB2hxtDgBA9R"
-            tags={['Web Application Security','Computer Network']}
+            tags={['Web Application Security', 'Computer Network']}
             tagColor="mint"
             verifyUrl="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_vJdHpbWCNtyqFerD4_1750749340779_completion_certificate.pdf"
           />
